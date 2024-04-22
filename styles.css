@@ -1,0 +1,398 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color:black;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+.banner {
+  position: relative;
+}
+
+.banner > header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 0 10%;
+  background: rgb(0 0 0 / 30%);
+}
+
+.banner > header img {
+  width: 350px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.banner h2 {
+  margin: 0 0 10px;
+  font-size: 60px;
+  color: rgba(252, 252, 252, 0.97);
+}
+
+.banner h3 {
+  margin: 0;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+}
+
+main {
+  color: white;
+  padding: 50px 10%;
+  font-size: 30px;
+}
+
+main p {
+  color: white;
+  margin: 0 0 60px;
+  opacity: 1;
+  line-height: 1.5;
+}
+
+.images {
+  display: flex;
+}
+
+.images > img {
+  flex-shrink: 0;
+  width: 65vw;
+  height: auto;
+  filter: grayscale(0.86);
+}
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body-2 {
+  display: grid;
+  height: 200%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+  background: #000;
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  padding: 10px; /* Adiciona espaçamento interno */
+  justify-content: center; /* Centraliza os ícones horizontalmente */
+  align-items: center; /* Centraliza os ícones verticalmente */
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 50px;
+  margin: 50px;
+  width: 100px;
+  height: 100px;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 18px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip a {
+  color: white;
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+}
+
+.wrapper .whatsapp:hover,
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip::before {
+  background: #02a818;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #E4405F;
+  color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #065a80;
+  color: #ffffff;
+}
+
+
+    /* -- YouTube Link Styles -- */
+
+    #source-link {
+      top: 60px;
+    }
+
+    #source-link>i {
+      color: rgb(94, 106, 210);
+    }
+
+    #yt-link {
+      top: 10px;
+    }
+
+    #yt-link>i {
+      color: rgb(219, 31, 106);
+
+    }
+
+    #a {
+      color: #ffffff;
+    }
+
+    .meta-link {
+      align-items: center;
+      backdrop-filter: blur(3px);
+      background-color: rgba(255, 255, 255, 0.338);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      display: inline-flex;
+      gap: 5px;
+      left: 10px;
+      padding: 10px 20px;
+      position: fixed;
+      text-decoration: none;
+      transition: background-color 600ms, border-color 600ms;
+      z-index: 10000;
+    }
+
+    .meta-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .meta-link>i,
+    .meta-link>span {
+      height: 20px;
+      line-height: 20px;
+    }
+
+    .meta-link>span {
+      color: white;
+      font-family: "Rubik", sans-serif;
+      transition: color 600ms;
+    }
+
+    footer a { 
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      color: white;
+      margin-top: 50px;
+    }
+
+    footer p {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+
+    @media (max-width: 982px) {
+      body {
+        overflow-x: hidden; /* Impede a rolagem horizontal */
+      }
+
+      .images {
+        overflow: hidden;
+      }
+    
+      .images > img {
+        margin-bottom: 20px; /* Adiciona margem inferior entre as imagens */
+      }
+
+      .banner > header img {
+        width: 200px;
+        height: 200px;
+        margin-left: 60px;
+        margin-top: 60px;
+      }
+
+      .banner h2 {
+        margin: 20px 0 10px;
+        font-size: 30px;
+        color: rgba(252, 252, 252, 0.97);
+      }
+      
+      .banner h3 {
+        margin: 0;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+      }
+
+
+      main {
+        color: white;
+        padding: 50px 10%;
+        font-size: 20px;
+      }
+
+      .wrapper {
+        display: grid;
+        justify-content: space-between;
+      }
+
+      .wrapper .icon {
+        margin-top: 50px;
+        width: auto; /* Define a largura automática para que os ícones ocupem a largura total do contêiner */
+        height: auto; /* Define a altura automática */
+        font-size: 48px; /* Aumenta o tamanho do ícone */
+        padding: 20px; /* Reduz o padding para evitar ícones muito espaçados */
+        margin: 20px 0; /* Remove o margin para evitar espaçamento entre os ícones */
+        display: block; /* Altera para uma exibição em bloco para que os ícones sejam exibidos um abaixo do outro */
+        text-align: center; /* Centraliza o texto (neste caso, o ícone) dentro do contêiner */
+      }
+
+    }    
+
+    @media (max-width: 540px) {
+      .banner > header img {
+        width: 200px;
+        height: 200px;
+        margin-left: 60px;
+        margin-top: 60px;
+      }
+
+      .banner h2 {
+        margin: 30px 0 10px;
+        font-size: 15px;
+        color: rgba(252, 252, 252, 0.97);
+      }
+      
+      .banner h3 {
+        margin: 0;
+        font-size: 15px;
+        color: rgb(255, 255, 255);
+      }
+      
+    }    
+
+    @media (max-width: 375px) {
+
+      .banner > header img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .banner h2 {
+        margin: 50px 0 10px;
+        font-size: 10px;
+        color: rgba(252, 252, 252, 0.97);
+      }
+
+      .banner h3 {
+        margin: 0;
+        font-size: 10px;
+        color: rgb(255, 255, 255);
+      }
+      
+      main {
+        color: white;
+        padding: 50px 10%;
+        font-size: 15px;
+      }
+
+      footer a,
+      footer p {
+        font-size: 10px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        color: white;
+      }
+
+    }
+
+    @media (max-width: 419px) {
+      .meta-link {
+        padding: 5px 10px; /* Reduz o padding */
+        gap: 3px; /* Reduz o espaçamento entre os elementos */
+      }
+    
+      .meta-link>i,
+      .meta-link>span {
+        height: 16px; /* Reduz a altura */
+        line-height: 16px; /* Ajusta a altura da linha */
+      }
+    
+      .meta-link>span {
+        font-size: 12px; /* Reduz o tamanho da fonte */
+      }
+    }
